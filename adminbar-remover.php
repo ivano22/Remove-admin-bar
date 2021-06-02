@@ -8,4 +8,7 @@ Author: Ivan
 Author URI: http://techhub.com
 */
 //Remove the admin bar from the front end
-add_filter('show_admin_bar', '_return_false');
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+function my_function_admin_bar() {
+    return false;
+}
